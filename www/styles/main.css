@@ -384,8 +384,37 @@ section {
 	color: #6B6865;
 }
 
+/*--------------News Page Styles--------------------*/
 
+#newsheadingtext {
+	  width: 80%;
+	  position: relative;
+	  left: 10%;
+	  text-align: justify;
+	  font-size: 2.4vw;
+}
 
+#newscontent {
+	padding: 2%;
+}
+
+.newslinkbox {
+	width: 20%;
+	position: relative;	
+	float: left;
+	font-size: 2.1vw;
+	padding: 2%;
+	margin-bottom: 1%;
+	border-radius: 30px;
+	margin-right: 1%;
+	background-color: #CFC9C9;
+	text-align: center;
+	opacity: .6;
+}
+
+.newslinkbox a:hover {
+	color: black;
+}
 
 /*--------------FOOTER-------------*/
 footer {

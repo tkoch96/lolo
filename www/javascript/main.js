@@ -42,7 +42,12 @@ $(document).ready(function(){
 		'ratio2': hwR2
 	});
 	//END MENU SIZING
+	
+	//Fix mars vid
 	$('#marsvid').width($(window).width() * .6).height($('#marsvid').width() / vidratio);	
+	
+	//Fix news links
+	$('.newslinkbox').height($(window).width() * .096);
 		
 	$(".menu-item").hover(function() {
 		if(me)
@@ -91,15 +96,20 @@ $(document).ready(function(){
 		
 	});
 	
-	$('.sub-menu-item').hover(function(){
-		var me = $(this).find('img'),
-		    src = me.attr("src").replace("Normal.png","Oval.png");
-		me.attr("src", src);
-	},function(){
-		var me = $(this).find('img'),
-			src = me.attr("src").replace("Oval.png","Normal.png");
-		me.attr("src", src);
-	});	
+	//News link box hover effect
+	$('.newslinkbox').hover(function() {
+		var me = $(this);
+		me.stop().animate({
+			'opacity': '1',
+			'font-size': '2.5vw'
+		},500);
+	}, function() {
+		var me = $(this);
+		me.stop().animate({
+			'opacity': '.6',
+			'font-size': '2.1vw'
+		},500);
+	});
 });
 
 (function($,sr){
@@ -160,4 +170,7 @@ $(window).smartresize(function(){
 	
 	$('.menu-item').css('top', newtop + 'px');
 	$('#menu').css('left', newleft + 'px');
+	
+	//Fix news links
+	$('.newslinkbox').height($(window).width() * .096);
 });
