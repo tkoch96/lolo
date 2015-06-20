@@ -1,0 +1,435 @@
+html {
+	min-width: 700px;
+}
+
+html,
+body,
+main {
+	margin: 0;
+	padding: 0;
+	display: block;
+	height: 100%;
+	width: 100%;
+	/*background-color: #FFF0E0;*/
+	background: url("../images/wheelbackground.jpg") no-repeat fixed center center #FFF;
+	font-family: 'EB Garamond', Serif;
+}
+
+a {
+	text-decoration: none;	
+	color: black;
+}		
+
+a:hover {
+	color: gray;
+}
+
+
+#cover {
+	width:      100%;
+	height:     100%; 
+	z-index:    400;
+	top:        0; 
+	left:       0; 
+	position:   fixed; 
+	background: url("../images/ajax-loader.gif") no-repeat scroll center center #FFF;
+}
+
+#cover2 { 
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	position: fixed;
+	background: url("../images/ajax-loader.gif") no-repeat scroll center center #FFF;
+	display: none;
+}
+
+@media all and (max-width: 1166px){
+
+	#head-image-wrap {
+	  width: 55%;
+	  padding-top: 5%;
+	  position: relative;
+	  left: 22.5%;
+	}
+
+	#introblurb{
+		font-family: 'EB Garamond', serif;
+		font-size: 2.5vw;
+		width: 60%; 
+		position: relative;
+		left: 22.5%;
+		font-weight: 600;
+	}
+}
+@media all and (min-width: 1166px){
+	#head-image-wrap {
+		  width: 40%;
+		  position: relative;
+		  float: left;
+		  padding: 3%;
+		  padding-top: 12%;
+	}
+
+	#introblurb{
+		  font-family: 'EB Garamond', serif;
+		  font-size: 2.5vw;
+		  width: 45%;
+		  float: left;
+		  position: relative;
+		  padding: 3%;
+		  font-weight: 600;
+	}
+}
+
+#inithello {
+	font-size: 3vw;
+}
+
+
+/*------Nav Things--------*/
+#logo-wrap{
+	display: inline;
+	position: relative;
+	float: left;
+	left: 6%;
+	margin-right: 5px;
+	top: 26%;
+}
+
+#logo-wrap img{
+	width: 100%;
+} 
+
+#nav-wrap {
+	position: relative;
+	margin: auto;
+	padding-bottom: 2%;
+	z-index: 10;
+}
+
+#menu {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.menu-item {
+	display: inline;
+	position: relative;
+	float: left;
+	left: 8%;
+	margin-right: 5px;
+}
+
+
+main {
+	box-sizing: border-box; 
+	min-height: 100%;
+}
+
+section {
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.container{
+	display: none;
+	height: auto;
+	width: 100%;
+}
+
+.sectiontitle {
+	font-size: 4.8vw;
+	text-align: center;
+}
+
+.sectiontitle p {
+	margin: 0px 0px 50px 0px;
+}	
+
+/*Photography and photo-gallery styles*/
+.title-desc {
+  width: 70%;
+  font-size: 2.5vw;
+  left: 15%;
+  position: relative;
+  text-align: justify;
+  font-family: 'EB Garamond', serif;
+}
+
+.gallery-cont{
+  width: 70%;
+  position: relative;
+  left: 15%;
+  background-color: white;
+  padding: 3%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/*thumb container*/
+.galthumbpic{
+	width: 50%;
+}
+/*thumb actual image*/
+.photothumbimg{
+	width: 100%;
+}
+
+.galintrotext{
+  float: right;
+  width: 40%;
+  padding: 2%;
+}
+
+.galintrotexttitle {
+	font-size: 3.7vw;
+}
+
+.galintrotexttitle p {
+	margin: 0px 0px 0px 0px;
+}
+
+.galintromaintext {
+	font-size: 1.5vw;
+}
+
+
+/*Gallery Page Styles*/
+
+.backtogallery {
+  position: relative;
+  left: 2%;
+  padding: 10px 10px 100px 10px;
+  font-size: 1.5vw;
+} 
+
+.portfoliogalcont {
+	width: 100%;
+	background: #fff;
+	padding: 2%;
+	margin-bottom: 2%;
+}
+
+.biggal{
+	height: auto;
+}
+
+.smallgal {
+	height: auto;
+}
+
+.portfoliogal img {
+	width: 80%;
+	position: relative;
+	left: 10%;
+}
+
+.portfoliogalimg img {
+	width: 100%;
+}
+
+.portfoliogaltextcont {
+	font-size: 1.7vw;
+	text-align: center;
+}
+
+/*GalPops*/
+
+.nyroModalCont {
+	overflow: hidden;
+}
+
+.galpopcont{
+	padding: 3%;
+}
+
+.galpoptitle {
+	font-size: 4.5vw;
+	text-align: center;
+}	
+
+.galpopimg {
+  width: 80%;
+  position: relative;
+  left: 10%;
+}
+
+.galpopimg img {
+	width: 100%;
+}
+
+/*Gallery Column Styles, so far very similar but option open for individual styling*/
+.brazcol, .adventurecol, .portraiturecol, .lioncol, .wanderingcol {
+	width: 30%;
+	float: left;
+	margin-left: 1.1%;
+	margin-right: 1.1%;
+}
+
+
+/*----------------------Mars Styles--------------------*/
+
+/*News Link Styling*/
+
+#mars p {
+	margin: 0px 0px 0px 0px;
+}
+
+#news-cont {
+	position: relative;
+    float: right;
+    width: 10%;
+    padding: 2%;
+}
+
+#newsheader {
+	font-size: 2vw;
+	text-align: center;
+}
+
+#newstextcont {
+	text-align: left;
+	font-size: 1.1vw;
+	padding: 0px 0px 15px 15px;
+}
+
+#newsimgcont {
+  width: 90%;
+  position: relative;
+  left: 5%;
+}
+
+#newsimgcont img {
+	width: 100%;
+}
+
+/*Main mars content*/
+
+#marscontent {
+	padding: 2%;
+	padding-top: 100px;
+}
+/*inidividual styling on pics*/
+#marspic1cont {
+	width: 40%;
+	float: left;
+	position: relative;
+	padding-right: 25px;
+	padding-left: 2%;
+}
+
+#marspic2cont {
+	width: 40%;
+	position: relative;
+	float: right;
+	padding-top: 6%;
+	padding-left: 5%;
+}
+
+#marspic3cont {
+	width: 40%;
+	float: left;
+	position: relative;
+	padding-right: 25px;
+	padding-left: 2%;
+}
+/*fixer for all images*/
+.marspic img {
+	width: 100%;
+}
+/*individual texts, assures they are on the correct sides of page*/
+#marstext1 {
+  position: relative;
+  font-size: 2vw;
+  width: 80%;
+  padding-left: 2%;
+}
+
+#marstext2 {
+	position: relative;
+	font-size: 2vw;
+	padding-top: 5%;
+	padding-left: 2%;
+}
+
+#marstext3 {
+  position: relative;
+  font-size: 2vw;
+  padding-left: 2%;
+}
+
+/*her video*/
+#marsvid  {
+	padding-left: 2%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	width: 60%;
+	position: relative;
+	left: 20%;
+}
+
+#marsvid iframe {
+	width: 100%;
+	height: 100%;
+}
+
+/*the press email color*/
+#media-email {
+	color: #6B6865;
+}
+
+
+
+
+/*--------------FOOTER-------------*/
+footer {
+	margin: auto;
+	box-sizing: border-box;
+	height: 230px;
+	width: 100%;
+	text-align: center;
+}
+
+#head-image-wrap img{
+		width: 100%;		
+}
+
+.footer-content {
+	width: 310px;
+	margin: auto;
+	padding-top: 30px;
+}
+
+.footer-icons div {
+	width: 33.333%;
+	float: left;
+}
+
+.footer-links {
+	text-align: center;
+	padding-top: 25px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 14px;
+	overflow: auto;
+	max-height: 150px;
+}
+
+.footer-link {
+	float: left;
+	width: 33.3%;
+}
+
+.footer-link a {
+}
+
+.footer-text {
+	margin: auto;
+	padding-top: 25px;
+}
