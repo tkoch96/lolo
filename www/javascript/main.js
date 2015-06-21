@@ -185,4 +185,9 @@ $(window).smartresize(function(){
 	//Fix Contact background
 	var contactbackgroundratio = 1.45;
 	$('#contactcont').height($(window).width() * .9 / contactbackgroundratio);
+	console.log('heresmart');
+});
+
+$(window).resize(function() {
+	console.log('herenotsosmart');
 });

@@ -427,6 +427,41 @@ section {
 	background-size: cover;
 }
 
+#contactleftcol {
+  position: relative;
+  width: 20%;
+  left: 11%;
+  font-size: 3vw;
+  top: 43%;
+}
+
+.contactlinkcont {
+	margin-top: 5%;
+}
+
+#contactrightcol {
+    width: 28%;
+  position: relative;
+  left: 46%;
+  top: 20%;
+  height: 40%;
+}
+
+form {
+	height: 100%;
+}
+
+input, textarea {
+	width: 100%;
+}
+
+input {
+	height: 15%;
+}
+
+textarea {
+	height: 55%;
+}
 
 
 
