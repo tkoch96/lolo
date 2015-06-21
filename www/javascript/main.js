@@ -48,6 +48,14 @@ $(document).ready(function(){
 	
 	//Fix news links
 	$('.newslinkbox').height($(window).width() * .096);
+	
+	
+	//Fix Contact background
+	setTimeout(function() {
+		var contactbackgroundratio = 1.45,
+			h = $(window).width() * .9 / contactbackgroundratio
+		$('#contactcont').height(h);
+	},1000);
 		
 	$(".menu-item").hover(function() {
 		if(me)
@@ -173,4 +181,8 @@ $(window).smartresize(function(){
 	
 	//Fix news links
 	$('.newslinkbox').height($(window).width() * .096);
+	
+	//Fix Contact background
+	var contactbackgroundratio = 1.45;
+	$('#contactcont').height($(window).width() * .9 / contactbackgroundratio);
 });

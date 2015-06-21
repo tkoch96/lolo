@@ -416,6 +416,23 @@ section {
 	color: black;
 }
 
+
+/*-----------------Contact Sizing------------*/
+
+#contactcont {
+	background: url(../images/Contactbgd.png) no-repeat scroll center center;
+	width: 90%;
+	position: relative;
+	left: 5%;
+	background-size: cover;
+}
+
+
+
+
+
+
+
 /*--------------FOOTER-------------*/
 footer {
 	margin: auto;
