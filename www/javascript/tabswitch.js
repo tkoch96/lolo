@@ -34,6 +34,12 @@ $(document).ready(function() {
 				$('.sub-menu-item').css('display','none');
 			});
 			$(tab).fadeIn(800);
+			
+			
+			//Submit button, cant size correct because of differences in padding 
+			$('#submitbutton').width($('textarea').width());
+			
+			
 			$('footer').css('display','block');
 			location.hash = $(window).data('tsm');
 			window.scrollTo(0, 0);

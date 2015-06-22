@@ -453,15 +453,100 @@ form {
 
 input, textarea {
 	width: 100%;
+	opacity: .72;
+	float: left;
 }
 
 input {
 	height: 15%;
+	outline: none;
+	padding: 2px 0px 0px 5px;
+	width: 100%;
+	border: none;
+	color: white;
+	font-family: 'EB Garamond', Serif;
+	font-size: 18px;
+}
+
+*:focus {
+	outline: 0;
 }
 
 textarea {
 	height: 55%;
+	outline: none;
+	padding: 2px 0px 0px 5px;
+	width: 100%;
+	resize: none;
+	border: none;
+	color: white;
+	font-family: 'EB Garamond', Serif;
+	font-size: 18px;
 }
+
+.lighter-input {
+	background-color: #998052;
+}
+
+.darker-input {
+	background-color: #5C4E33;
+}
+
+#submitbutton:hover {
+	opacity: .9;
+}
+
+
+/*---Placeholder Stylings----*/
+input::-webkit-input-placeholder {
+   color: white;
+   font-size: 18px;
+   font-family: 'EB Garamond', Serif;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+    font-size: 18px;
+	font-family: 'EB Garamond', Serif;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+   color: white; 
+ font-size: 18px; 
+ font-family: 'EB Garamond', Serif;
+}
+
+input:-ms-input-placeholder {  
+   color: white;  
+    font-size: 18px;
+	font-family: 'EB Garamond', Serif;
+}
+
+textarea::-webkit-input-placeholder {
+   color: white;
+    font-size: 18px;
+	font-family: 'EB Garamond', Serif;
+}
+
+textarea:::-moz-placeholder { /* Firefox 18- */
+   color: white;  
+    font-size: 18px;
+	font-family: 'EB Garamond', Serif;
+}
+textarea::-moz-placeholder {  /* Firefox 19+ */
+   color: white; 
+ font-size: 18px;  
+ font-family: 'EB Garamond', Serif;
+}
+textarea:-ms-input-placeholder {  
+   color: white;  
+    font-size: 16px;
+	font-family: 'EB Garamond', Serif;
+}
+
+
+
+
 
 
 
@@ -513,4 +598,39 @@ footer {
 .footer-text {
 	margin: auto;
 	padding-top: 25px;
+}
+
+
+
+/*---------Sent mail styles---------*/
+
+
+#sentMailSection{
+	height: 100%;
+	width: 100%;
+	background: url("../images/wheelbackground.jpg") no-repeat fixed center center #FFF;
+}
+
+#sentMailCont{
+	height: 60%;
+	width: 60%;
+	margin: auto;
+	top: 25%;
+	position: relative;
+}
+
+#sentMailContent{
+	font-family: 'FuturaLT-Heavy';
+	color: #ffffff;
+	text-align: center;
+}
+
+#smthx{
+	font-size: 4.8vw;
+	color: black;
+}
+
+#smredir{
+	font-size: 2.2vw;
+	color: black;
 }

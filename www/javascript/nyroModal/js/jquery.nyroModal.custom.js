@@ -26,7 +26,7 @@
  *
  */
 jQuery(function($, undefined) {
-
+	//getting browser info
 	var uaMatch = function(ua) {
 		ua = ua.toLowerCase();
 		var match = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
@@ -42,6 +42,7 @@ jQuery(function($, undefined) {
 		};
 	},
 	matched = uaMatch(navigator.userAgent),
+	//sets browser to null
 	browser = {};
 
 	if (matched.browser) {
