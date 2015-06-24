@@ -14,7 +14,7 @@ function initNyroModal() {
 			minW: undefined,    // minimum width
 			minH: undefined,    // minimum height
 			maxW: undefined,    // maximum width
-			maxH: undefined,    // maximum height
+			maxH: 900,    // maximum height
 		}
 		, callbacks: {
 			afterShowCont: function() {
@@ -30,13 +30,13 @@ function initNyroModal() {
 	smallnmObj = {
 		sizes: {
 			initW: $swi,   // Initial width
-			initH: $sh,   // Initial height
+			initH: 300,   // Initial height
 			w: undefined,       // width
-			h: undefined,       // height
+			h: 300,       // height
 			minW: undefined,    // minimum width
 			minH: undefined,    // minimum height
 			maxW: undefined,    // maximum width
-			maxH: undefined,    // maximum height
+			maxH: 300,    // maximum height
 		}
 		, callbacks: {
 			afterShowCont: function() {
@@ -50,8 +50,10 @@ function initNyroModal() {
 		}
 	}
 	
-	var	bignyro = $('.tallgal').nyroModal( bignmObj ),	
-		smallnyro = $( '.nyroModal' ).not('.tallgal').nyroModal( smallnmObj );
+	if($(window).width() > 800 )
+		bignyro = $('.nyroModal').nyroModal( bignmObj );	
+	else
+		smallnyro = $( '.nyroModal' ).nyroModal( smallnmObj )
 	
 };
 
