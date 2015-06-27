@@ -12,7 +12,7 @@ if($(window).width() > 800) {
 		
 		var	vidratio = 1.711,
 			imgw = $('#menu').width() * .1329999,
-			imgh = $(window).data('ratio') * imgw,
+			imgh = imgw / 1.4945 ,
 			logor = $('#logo-wrap img').width() / $('#logo-wrap img').height() * .68;
 			
 		$('.menu-item').css({

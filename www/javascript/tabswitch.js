@@ -1,6 +1,6 @@
 $(document).ready(function() {
 		location.hash = '#home';
-		$('#home').fadeIn(2800);
+		$('#home').fadeIn(500);
 	
     $(".linkimg").click(function(event) {
         event.preventDefault();
@@ -27,13 +27,13 @@ $(document).ready(function() {
 		setTimeout(function(){
 			//remove gear spinner, put content back
 			$('#cover2').remove();
-			$(tab).fadeIn(800);
+			$(tab).fadeIn(400);
 			$('.mainbuttonimg').each(function(){
 				src = $(this).attr("src").replace("Oval.PNG","Normal.PNG");
 				$(this).attr("src", src);
 				$('.sub-menu-item').css('display','none');
 			});
-			$(tab).fadeIn(800);
+			$(tab).fadeIn(400);
 			
 			
 			//Submit button, cant size correct because of differences in padding 
@@ -43,7 +43,7 @@ $(document).ready(function() {
 			$('footer').css('display','block');
 			location.hash = $(window).data('tsm');
 			window.scrollTo(0, 0);
-		},800);
+		},400);
     });
 	
 });
