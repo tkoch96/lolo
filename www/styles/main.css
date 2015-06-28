@@ -13,6 +13,7 @@ main {
 	/*background-color: #FFF0E0;*/
 	background: url("../images/wheelbackground.jpg") no-repeat fixed center center #FFF;
 	font-family: 'EB Garamond', Serif;
+	padding-top: 1%;
 }
 
 a {
@@ -91,24 +92,13 @@ a:hover {
 
 
 /*------Nav Things--------*/
-#logo-wrap{
-	display: inline;
-	position: relative;
-	float: left;
-	left: 6%;
-	margin-right: 5px;
-	top: 26%;
-}
-
-#logo-wrap img{
-	width: 100%;
-} 
 
 #nav-wrap {
 	position: relative;
 	margin: auto;
-	padding-bottom: 2%;
 	z-index: 10;
+	width: 90vw;
+	height: 15%;
 }
 
 #menu {
@@ -121,8 +111,13 @@ a:hover {
 	display: inline;
 	position: relative;
 	float: left;
-	left: 8%;
-	margin-right: 5px;
+	width: 14.99vw;
+}
+
+.menu-item img {
+	position: relative;
+	left: 10%;
+	width: 80%;
 }
 
 
