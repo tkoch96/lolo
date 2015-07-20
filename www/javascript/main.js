@@ -1,6 +1,6 @@
 
 //REGULAR WINDOW JS
-if($(window).width() > 800) {
+if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
 	$(window).load(function(){
 		setTimeout(function(){
 			$('#cover').remove();
@@ -27,7 +27,9 @@ if($(window).width() > 800) {
 				h = $(window).width() * .9 / contactbackgroundratio
 			$('#contactcont').height(h);
 		},1000);
-			
+		
+		
+		//Menu Item Effect
 		$(".menu-item").hover(function() {
 			var me = $(this).find('img'),
 				biggerwidth = $(this).width(),
@@ -66,6 +68,29 @@ if($(window).width() > 800) {
 				'font-size': '2.1vw'
 			},500);
 		});
+		
+		//Writings thumb images hover effect
+		$('.writingsthumbbox').hover(function() {
+			var me = $(this).find('img'),
+				biggerwidth = $(this).width();
+				
+			me.stop().animate({
+				width: biggerwidth,
+				left: 0
+			},400);
+		},
+		function() {
+			var me = $(this).find('img'),
+			smallerwidth = $(this).width() * .9,
+			shiftitleft = $(this).width() * .05;
+			
+			me.stop().animate({
+				width: smallerwidth,
+				left: shiftitleft
+			},400);
+		});
+		
+		
 	});
 
 	(function($,sr){
@@ -107,7 +132,12 @@ if($(window).width() > 800) {
 		//Fix mars vid
 		$('#marsvid').width($(window).width() * .6).height($('#marsvid').width() / vidratio);	
 		
-		
+		$('.menu-item').css("width","14.999vw").find('img')
+		.css({
+			"left": "10%",
+			"width": "80%",
+			"position": "relative"
+		});
 
 		//Fix news links
 		$('.newslinkbox').height($(window).width() * .096);

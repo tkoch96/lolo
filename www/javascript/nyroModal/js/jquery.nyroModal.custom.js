@@ -603,7 +603,6 @@ jQuery(function($, undefined) {
 					});
 					this.elts.cont.after(elts);
 				}
-				this.elts.cont.css('overflow', 'auto');
 				this._callFilters('afterReposition');
 			},
 
@@ -1208,10 +1207,12 @@ jQuery(function($, undefined) {
 					nm.elts.cont.find('.nyroModalNext, .nyroModalPrev').remove();
 			},
 			galleryNext: function(nm) {
-				this._getGalleryLink(nm, 1).nyroModal(nm.getForNewLinks(), true).click();
+				if(this._getGalleryLink(nm, 1) != undefined)
+					this._getGalleryLink(nm, 1).nyroModal(nm.getForNewLinks(), true).click();
 			},
 			galleryPrev: function(nm) {
-				this._getGalleryLink(nm, -1).nyroModal(nm.getForNewLinks(), true).click();
+				if(this._getGalleryLink(nm, -1) != undefined)
+					this._getGalleryLink(nm, -1).nyroModal(nm.getForNewLinks(), true).click();
 			},
 			_getGalleryLink: function(nm, dir) {
 				if (nm.store.gallery) {

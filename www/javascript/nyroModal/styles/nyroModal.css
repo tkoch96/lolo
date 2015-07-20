@@ -18,17 +18,16 @@
 	height: 12px;
 	text-indent: -9999em;
 	background: url(../img/close.gif);
+	display: none;
 }
 .nyroModalTitle {
 	top: -26px;
 	left: 0;
 	margin: 0;
     font-size: 1.1em;
-	color: #ddd;
 }
 .nyroModalCont {
 	position: absolute;
-	border: 4px solid #777;
 	margin: 25px;
 	background: #fff;
 	z-index: 3;
@@ -50,10 +49,10 @@
 }
 .nyroModalLink, .nyroModalDom, .nyroModalForm, .nyroModalFormFile {
 	position: relative;
-	padding: 10px;
+	/*padding: 10px;
 	min-height: 250px;
 	min-width: 250px;
-	max-width: 1000px;
+	max-width: 1000px;*/
 }
 .nyroModalImage, .nyroModalSwf, .nyroModalIframe, .nyroModalIframeForm {
 	position: relative;
@@ -70,16 +69,17 @@
 	position: absolute;
 	width: 100px;
 	height: 100px;
-	background: #fff url(../../../images/ajax-loader.gif) no-repeat center;
+	background: #fff url(../../../images/ajax-loader.gif) no-repeat center center;
 	padding: 0;
 }
 .nyroModalPrev, .nyroModalNext {
 	outline: none;
-	position: absolute;
-	top: 15%;
-	height: 60%;
-	width: 108px;
-	text-indent: -9999em;
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  width: 10%;
+  text-indent: -9999em;
+  background-size: 40px 40px !important;
 }
 .nyroModalImage .nyroModalPrev, .nyroModalImage .nyroModalNext {
 	height: 100%;
@@ -90,13 +90,11 @@
 	left: 0;
 }
 .nyroModalPrev {
-	background-image: url(../../../images/Icons/arrowleft.png);
+	background: url(../../../images/Icons/arrowleft.png) no-repeat center;
 }
 .nyroModalNext {
 	right: 0;
-	background-position: right 20%;
 }
 .nyroModalNext {
-	background-position: right 20%;
-	background-image: url(../../../images/Icons/arrowright.png);
+	background: url(../../../images/Icons/arrowright.png) no-repeat center;
 }

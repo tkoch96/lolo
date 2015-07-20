@@ -21,13 +21,13 @@ $(document).ready(function() {
 		if(!tab)
 			return;
         $(".container").not(tab).css("display", "none");
+		
 		//cache it for scope
 		$(window).data('tsm',tab);
 		
 		setTimeout(function(){
 			//remove gear spinner, put content back
 			$('#cover2').remove();
-			$(tab).fadeIn(400);
 			$('.mainbuttonimg').each(function(){
 				src = $(this).attr("src").replace("Oval.PNG","Normal.PNG");
 				$(this).attr("src", src);
@@ -35,13 +35,21 @@ $(document).ready(function() {
 			});
 			$(tab).fadeIn(400);
 			
-			
 			//Submit button, cant size correct because of differences in padding 
 			$('#submitbutton').width($('textarea').width());
 			
 			
 			$('footer').css('display','block');
 			location.hash = $(window).data('tsm');
+			
+			
+			//book icons sizing
+			if(location.hash == "#writings") {
+				booktop = ($('#writingsthumbcont').height() - $('.writingsthumbbox').height()) / 2;
+				$('.writingsthumbbox').css("top", booktop + 'px');
+			}
+			
+			
 			window.scrollTo(0, 0);
 		},400);
     });
