@@ -177,7 +177,13 @@ function initNyroModal() {
 	$('.arcturusnyro').nyroModal(booknmObj);
 };
 
-
+function killNyroModal() {
+	$('.booknyro').nmDestroy();
+	$('.vegetarianismnyro').nmDestroy();
+	$('.orchardnyro').nmDestroy();
+	$('.moonwallnyro').nmDestroy();
+	$('.arcturusnyro').nmDestroy();
+}
 
 
 $( document ).ready( function() {
@@ -185,44 +191,29 @@ $( document ).ready( function() {
 	   initNyroModal();
    },400);
    
-   $(window).resize(function() {
-	   if($('body').hasClass('body--nyroOpen') && !$('.nyroModalCont').find('.bookleftpage').find('.bookmaintext').hasClass('titleleftpage')) {
-			_elm = [],
-			_elm[0] = $('.nyroModalCont').find('.bookleftpage').find('.bookmaintext')[0],
-			_elm[1] = $('.nyroModalCont').find('.bookrightpage').find('.bookmaintext')[0];	
-			for(i = 0;i< 2; i++) {
-				_hasScrollBar = false; 
-				if (Math.abs(_elm[i].clientHeight - _elm[i].scrollHeight) > 5)
-					_hasScrollBar = true;
-				while(_hasScrollBar) {
-					curr = $(_elm[i]).css('font-size');
-					curr = curr.slice(0,curr.length-2);
-					curr --;
-					$(_elm[i]).css('font-size', curr + 'px');
-
-					if (Math.abs(_elm[i].clientHeight - _elm[i].scrollHeight) < 5)
-						_hasScrollBar = false;
-				}
-			}
-	   }
-	   else if($('.nyroModalCont').find('.bookleftpage').find('.bookmaintext').hasClass('titleleftpage')) {
-						_elm = [],
-						_elm[0] = $('.nyroModalCont').find('.bookleftpage').find('.bookmaintext')[0],
-						_elm[1] = $('.nyroModalCont').find('.bookrightpage').find('.bookmaintext')[0];	
-						for(i = 0;i< 2; i++) {
-							_hasScrollBar = false; 
-							if (_elm[i].clientHeight < _elm[i].scrollHeight)
-							_hasScrollBar = true;
-							while(_hasScrollBar) {
-								curr = $(_elm[i]).css('font-size');
-								curr = curr.slice(0,curr.length-2);
-								curr --;
-								$(_elm[i]).find('p').not($('.titlelefttitle')).css('font-size', curr + 'px');
-								$(_elm[i]).find('p').not($('.titleleftauthor')).css('font-size', curr + 'px');
-								if (Math.abs(_elm[i].clientHeight - _elm[i].scrollHeight) < 5)
-									_hasScrollBar = false;
-							}
-						}
-					}
+   //kill and re-init the modals when the window is resized/orientation is changed
+	$(window).on('orientationchange',function(){
+		if($('body').hasClass('body--nyroOpen'))
+			$.nmTop().close();
+		killNyroModal();
+		initNyroModal();
 	});
+	
+	$.fn.resizeStopped = function(callback) {
+		var $this = $(this), self = this;
+		$this.resize(function(){
+			if ($this.data('resizeTimeout')) {
+			  clearTimeout($this.data('resizeTimeout'));
+			}
+			$this.data('resizeTimeout', setTimeout(callback,1500,self));
+		});
+	};
+	
+	$(window).resizeStopped(function() {
+		if($('body').hasClass('body--nyroOpen'))
+			$.nmTop().close();
+		killNyroModal();
+		initNyroModal();
+	});
+  
 });
